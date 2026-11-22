@@ -6,6 +6,33 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const repository = path.join(root, '..');
+const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], {
+  cwd: repository,
+  encoding: 'utf8',
+}).trim();
+const changedSources = execFileSync(
+  'git',
+  [
+    'status',
+    '--porcelain',
+    '--untracked-files=all',
+    '--',
+    'js/src',
+    'js/package.json',
+    'js/package-lock.json',
+    'js/README.md',
+    'js/LICENSE',
+    'js/NOTICE',
+    'js/tsconfig.json',
+    'js/tsconfig.build.json',
+    'js/scripts/resources.mjs',
+    'js/scripts/release-rehearsal.mjs',
+    'vendor/contract',
+  ],
+  { cwd: repository, encoding: 'utf8' },
+);
+assert.equal(changedSources, '', 'Packaged source must match the recorded commit.');
 const metadata = JSON.parse(await readFile(path.join(root, 'package.json'), 'utf8'));
 assert.equal(metadata.private, true, 'Publication remains disabled for this rehearsal.');
 assert.match(metadata.version, /^\d+\.\d+\.\d+-rc\.\d+$/u);
@@ -35,6 +62,7 @@ assert.deepEqual(preview.files, first.files);
 const report = {
   result: 'PASS',
   runtime: process.version,
+  sourceCommit,
   packageName: metadata.name,
   version: metadata.version,
   artifact: first.filename,
