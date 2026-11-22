@@ -23,8 +23,8 @@ a2a = ["a2a-sdk==1.2.2"]
 server = ["a2a-sdk[http-server]==1.2.2"]
 
 [project.urls]
-Repository = "https://github.com/shashikanth-gs/a2a-schema-contract-sdk"
-Issues = "https://github.com/shashikanth-gs/a2a-schema-contract-sdk/issues"
+Repository = "https://github.com/a2a-schema-contract/a2a-schema-contract-sdk"
+Issues = "https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/issues"
 
 [dependency-groups]
 dev = [

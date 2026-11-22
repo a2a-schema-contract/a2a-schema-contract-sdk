@@ -50,7 +50,7 @@ does not establish hosted acceptance of these additions.
 Use Node **22 >=22.23.3** or **24 >=24.21.0**, npm and ESM.
 
 ```sh
-git clone https://github.com/shashikanth-gs/a2a-schema-contract-sdk.git
+git clone https://github.com/a2a-schema-contract/a2a-schema-contract-sdk.git
 git -C a2a-schema-contract-sdk checkout codex/m3-node-release-candidate
 cd a2a-schema-contract-sdk/js
 npm ci
@@ -83,8 +83,8 @@ installed without that peer. Express is an example host dependency.
 | Start here | What it covers |
 |---|---|
 | [Node API and quickstarts](js/README.md) | Public imports, client/server integration, schema validation, negotiation, lifecycle and resolver configuration |
-| [Reference applications](https://github.com/shashikanth-gs/a2a-schema-contract-reference) | Independent installed-package clients/agents and 37 reproducible inline scenarios |
-| [Schema Contract specification](https://github.com/shashikanth-gs/a2a-schema-contract) | Normative community draft, extension schemas, identifiers and conformance fixtures |
+| [Reference applications](https://github.com/a2a-schema-contract/a2a-schema-contract-reference) | Independent installed-package clients/agents and 37 reproducible inline scenarios |
+| [Schema Contract specification](https://github.com/a2a-schema-contract/a2a-schema-contract) | Normative community draft, extension schemas, identifiers and conformance fixtures |
 | [Support matrix](docs/support-matrix.md) | Supported runtimes, transport, media, schema profile and limitations |
 | [Architecture](docs/architecture.md) | Implementation decisions and their rationale |
 | [Resolver threat model](docs/resolver-security.md) | Network policy, integrity, credential/cache boundaries and resource limits |
@@ -115,14 +115,14 @@ source copy. The Node candidate passes **381 tests, 26 installed-consumer checks
 and 20 pinned structural cases** on Node 22.23.3 and 24.21.0. The
 [candidate report](docs/node-candidate-report.md) records exact artifact hashes,
 hosted Linux/macOS/Windows evidence and limitations. CI results are available in the repository's
-[Actions](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/actions) tab;
+[Actions](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/actions) tab;
 local reports retain their original validation context.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development expectations and
 [SECURITY.md](SECURITY.md) for private vulnerability reporting. Use
-[issues](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/issues) for bugs
+[issues](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/issues) for bugs
 and feature requests, and
-[discussions](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/discussions)
+[discussions](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/discussions)
 for usage questions.
 
 ## Repository layout

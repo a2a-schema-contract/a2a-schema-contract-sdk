@@ -600,9 +600,9 @@ shipped schemas, and repeatable cold/warm core/worker/HTTPS benchmarks. The
 release rehearsal command `npm run release:rehearsal` verifies two identical packs
 and a dry-run file list, without publishing or creating tags.
 
-See the repository [operations guide](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/blob/main/docs/node-operations.md),
-[release policy](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/blob/main/docs/node-release.md),
-and [changelog](https://github.com/shashikanth-gs/a2a-schema-contract-sdk/blob/main/CHANGELOG.md).
+See the repository [operations guide](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/blob/main/docs/node-operations.md),
+[release policy](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/blob/main/docs/node-release.md),
+and [changelog](https://github.com/a2a-schema-contract/a2a-schema-contract-sdk/blob/main/CHANGELOG.md).
 
 Application executions have an additional hard bound of four per server,
 independent of validation worker concurrency. `concurrentExecutions` may lower
